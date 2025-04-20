@@ -158,6 +158,7 @@ npm run test:e2e
 
 # Coverage
 npm run test:cov
+
 ```
 
 ---
