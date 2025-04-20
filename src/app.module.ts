@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module';
 import { DocumentModule } from './document/document.module';
 import { IngestionModule } from './ingestion/ingestion.module';
 import { ConfigModule } from '@nestjs/config';
+import configuration from './common/config/configuration';
 
 const modules = [
   UsersModule,
@@ -19,11 +20,11 @@ const config = [
   }),
   TypeOrmModule.forRoot({
     type: 'postgres',
-    host: 'localhost',
+    host: configuration().DB_HOST,
     port: 5432,
-    username: 'postgres',
-    password: '123456',
-    database: 'postgres',
+    username: configuration().DB_USERNAME,
+    password: configuration().DB_PASSWORD,
+    database: configuration().DB_DATABASE,
     entities: [__dirname + '/**/*.entity{.ts,.js}'],
     synchronize: true,
     logging: true,

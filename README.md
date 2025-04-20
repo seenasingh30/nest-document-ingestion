@@ -46,8 +46,13 @@ Create a `.env` file at the root:
 
 ```env
 PORT=3000
-JWT_SECRET=super_secret_key
-PYTHON_INGESTION_URL=http://localhost:5001/ingest
+JWT_SECRET=iuhhuhhhkijw4jh9
+PYTHON_INGESTION_URL=http://localhost:5000/ingest
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=postgres
+DB_PASSWORD=123456
+DB_DATABASE=postgres
 ```
 
 ---
